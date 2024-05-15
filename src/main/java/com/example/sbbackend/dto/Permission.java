@@ -3,6 +3,7 @@ package com.example.sbbackend.dto;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
+@Getter
 @RequiredArgsConstructor
 public enum Permission {
 
@@ -15,6 +16,5 @@ public enum Permission {
     MANAGER_CREATE("management:create"),
     MANAGER_DELETE("management:delete");
 
-    @Getter
     private final String permission;
 }
