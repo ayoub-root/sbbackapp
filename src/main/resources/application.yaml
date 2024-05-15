@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: "sbbackend"
+
+  datasource:
+    url: jdbc:postgresql://ep-plain-queen-a2qiyyoz.eu-central-1.aws.neon.tech/abappdb?user=abagencydb_owner&password=fXR1i2qtYOup&sslmode=require
+    username: abagencydb_owner
+    password: fXR1i2qtYOup
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop #create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+
+application:
+  security:
+    jwt:
+
+      secret-key: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+      expiration: 86400000 # a day
+      refreshToken:
+        expiration: 604800000 # 7 days
